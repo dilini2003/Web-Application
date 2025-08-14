@@ -1,0 +1,138 @@
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  padding:  0;
+  margin-bottom: 0;
+  border-bottom: 1px solid #9ca3af;
+  position: fixed;
+  top: -0.4rem;
+  left: -0.4rem;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000b6d;
+}
+
+.items1 {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.tag {
+  font-weight: 500;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hr {
+  border: none;
+  outline: none;
+  height: 2px;
+  background-color: #5f6fff;
+  width: 60%;
+  margin: 4px auto 0;
+  display: none;
+}
+
+/* Show hr only when link is active */
+.link.active .hr {
+  display: block;
+}
+
+.login-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: #5f6fff;
+  color: white;
+  border: none;
+  border-radius: 4rem;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 2rem;
+}
+
+.login-btn:hover {
+  background-color: #4c5de0;
+}
+
+.profile {
+    width: 2.9rem;          /* w-8 = 8 × 0.25rem */
+  height: 2.9rem;         /* optional if you want it to be a circle */
+  border-radius: 9999px;
+}
+
+.dropdown {
+    width: 0.3rem;
+    background: none;
+    border: none;
+}
+
+.profile-container {
+    display: flex;
+  align-items: center;
+  gap: 0.5rem;        /* gap-2 = 0.5rem */
+  cursor: pointer;
+  position: relative;
+  margin-right: 2.9rem;
+}
+
+.drop {
+    position: absolute;
+  top: 0;
+  right: 0;
+  padding-top: 3.5rem;         /* pt-14 = 14 × 0.25rem */
+  font-size: 1rem;             /* text-base */
+  font-weight: 500;            /* font-medium */
+  color: #4b5563;              /* text-gray-600 */
+  z-index: 20;
+  display: none;
+}
+
+.profile-container:hover .drop {
+  display: block;
+}
+
+.dropdown-content {
+  min-width: 9rem;            /* min-w-48 = 48 × 0.25rem */
+  background-color: #f5f5f4;   /* bg-stone-100 */
+  border-radius: 0.5rem;      /* rounded */
+  display: flex;
+  flex-direction: column;      /* flex-col */
+  gap: 0;                   /* gap-4 */
+  padding: 1rem;               /* p-4 */
+}
+
+.item {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.item:hover {
+  color: #000000;
+}

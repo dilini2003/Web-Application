@@ -1,0 +1,49 @@
+.contact {
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin-top: 6rem;
+  
+}
+
+.contact-title {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: underline #5F6FFF;
+  margin-bottom: 30px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contact-image img {
+  max-width: 620px;
+  height: auto;
+  margin-left: 1rem;
+  border-radius: 8px;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.info-title {
+  font-size: 20px;
+  margin-top: 4rem;
+  font-weight: 200;
+  margin-bottom: 2rem;
+}
+
+.info-address,
+.info-phone,
+.info-email {
+  font-size: 15px;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}

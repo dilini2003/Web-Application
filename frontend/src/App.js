@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Home from './pages/Home';
+import Login from './pages/Login';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import MyProfile from './pages/MyProfile';
+import MyAppointments from './pages/MyAppointments';
+import Blog from './pages/Blog';
+import Appointment from './pages/Appointment';
+import Navbar from './components/Navbar';
+import Doctors from './pages/Doctors';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/> } />
+        <Route path='/doctors' element={<Doctors />} />
+        <Route path='/doctors/:speciality' element={<Doctors /> } />
+        <Route path='/login' element={<Login /> } />
+        <Route path='/about' element={<About/> } />
+        <Route path='/blog' element={<Blog /> } />
+        <Route path='/contact' element={<Contact /> } />
+        <Route path='/my-profile' element={<MyProfile /> } />
+        <Route path='/my-appointments' element={<MyAppointments /> } />
+        <Route path='/appointment/:docID' element={<Appointment/> } />
+      </Routes>
     </div>
   );
 }

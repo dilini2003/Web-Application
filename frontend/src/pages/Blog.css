@@ -1,0 +1,20 @@
+.blog-section {
+    margin-top: 6rem;
+  font-family: Arial, sans-serif;
+}
+
+.blog-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #333;
+  text-decoration: underline #5F6FFF;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 4rem;
+  margin-bottom: 1rem;
+}
