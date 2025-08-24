@@ -1,0 +1,235 @@
+.appointment-container {
+  max-width: 1000px;
+  margin-top: 3rem;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Doctor Details */
+
+
+.doctor-image-box {
+  width: 11rem;
+  height: 15rem;
+  padding: 1rem;
+  padding-top: 0.2px;
+  background-color: #5F6FFF;
+  display: flex;
+  margin-left: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.doctor-image {
+  width: 9rem;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.doctor-content {
+  flex: 1;
+  border: 1px solid #9ca3af; 
+  border-radius: 0.5rem; 
+  padding: 2rem;     
+  width: 50rem;   
+  padding-top: 1.75rem;  
+  padding-bottom: 1.75rem;
+  background-color: #ffffff;
+  margin-left: 18rem; 
+  margin-top: -16rem;
+} 
+
+.doctor-name {
+  font-size: 1.3rem;   
+  font-weight: 600;
+  gap:0.5rem;    
+  color: #111827; 
+}
+.verified-icon {
+  width: 1.25rem;
+}
+.doctor-meta {
+  display: flex;
+ margin-top: 0.4rem;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.doctor-degree {
+font-size: 0.9rem; /* text-sm = 14px */
+  margin-top: 0.25rem; /* mt-1 = 4px */
+  color: #4b5563;
+}
+
+.doctor-experience {
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  font-size: 0.75rem;
+  border: 1px solid #181818;
+  border-radius: 0.8rem;
+  background-color: #ffffff;
+}
+
+.about-title {
+  display: flex;
+  gap: 0.25rem;         /* gap-1 = 4px */
+  font-size: 1rem;  /* text-sm = 14px */
+  font-weight: 600;     /* font-medium */
+  color: #111827;       /* text-gray-900 */
+  margin-top: 0.75rem; 
+}
+.about-text {
+  line-height: 1.4rem;
+  font-size: 1rem;    /* text-sm = 14px */
+  color: #555;         /* text-gray-500 */
+  max-width: 800px;       /* corrected */
+  margin-top: 0.25rem;
+}
+.fees {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+}
+.fee {
+  font-weight: bold;
+  color: #111;
+}
+
+/* Booking Section */
+.booking-section {
+  margin-top: 1rem;            /* mt-4 = 16px */
+  font-weight: 500;            /* font-medium */
+  color: #374151;
+  margin-left: 18rem;
+}
+.booking-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+.booking-days-container {
+  display: flex;
+  gap: 0.75rem;           /* gap-3 = 12px */
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+.booking-day-card {
+  background: #ffffff;
+  border: 1px solid #DDDDDD;
+  padding: 12px 10px;
+  border-radius: 10rem;
+  width: 1.6rem;
+  cursor: pointer;
+  text-align: center;
+}
+.booking-day-card.active {
+  background: #0047ab;
+  color: #fff;
+}
+.booking-times-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.slot-btn {
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 14px;
+  background: #fff;
+  cursor: pointer;
+}
+.slot-btn.selected {
+  background: #0047ab;
+  color: #fff;
+  border-color: #0047ab;
+}
+.book-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  background: #5b7bff;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Related Doctors */
+.related-doctors-section {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.related-doctors-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.related-doctor-card {
+    width: 14rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+.related-doctor-card:hover {
+  transform: translateY(-6px);
+}
+.image-box {
+  background-color: #f1f5f9;
+  padding-left: 2rem;
+  display: flex;
+}
+.image-box img {
+  width: 10rem;
+  height: 13rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  object-fit: cover;
+}
+.doctor-info {
+  padding: 1rem;
+  text-align:left;
+}
+.doctor-status {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 4px;
+  font-size: 0.875rem;
+  color: #22c55e;
+  font-weight: 500;
+}
+
+.status-label::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 9999px;
+  display: inline-block;
+}
+
+.doctor-name {
+  font-size: 1.1rem;
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+  font-weight: 500;
+  color: #111827; 
+}
+
+.doctor-speciality {
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+  margin-bottom: 1rem;
+  color: #6b7280;
+}
+
