@@ -1,0 +1,58 @@
+.Navbar-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-top: 0;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #ffffff;
+}
+
+.Navbar-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  width: 40px;
+  height: auto;
+}
+
+.logo_title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000b6d;
+}
+
+.Navbar-token {
+  border: 1px solid #6B7280;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  border-radius: 9999px;
+  color: #262729;
+  margin-top: 2.5rem;
+  font-size: 0.875rem;
+}
+
+.Navbar-logout-button {
+  background-color: #5f6fff;
+  color: white;
+  font-size: 0.875rem;
+  padding: 0.5rem 2.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+}
+
+.Navbar-logout-button:hover {
+  background-color: #3549fa;
+}

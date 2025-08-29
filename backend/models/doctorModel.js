@@ -1,17 +1,19 @@
 import mongoose from 'mongoose'
 
-const doctorSchema = new mongoose.Schema({
-    name: {type:String, required: true},
-    email: {type:String, required: true, unique:true},
-    password: {type:String, required: true},
-    image: {type:String, default:"data:image/png;base64,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"},
-    speciality: {type:String, required: true},
-    degree: {type:String, required: true},
-    experience: {type:String, required: true},
-    about:{type:String, required: true},
-    fees:{type:Number, required: true},
-    available:{type:String, default: true},
-    slots_booked:{type:Object, default:{}}
+const doctorSchema = new mongoose.Schema({ 
+    name: {type:String, required: true}, 
+    email: {type:String, required: true, unique:true}, 
+    password: {type:String, required: true}, 
+    image: {type:String, default:"data:image/png;base64,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"}, 
+    speciality: {type:String, required: true}, 
+    degree: {type:String, required: true}, 
+    experience: {type:String, required: true}, 
+    about:{type:String, required: true}, 
+    fees:{type:Number, required: true}, 
+    contactNumber: {type:String, required: true}, 
+    medicalLicenseNumber: {type:String, required: true}, 
+    available:{type:Boolean, default: true}, 
+    slots_booked:{type:Object, default:{}} 
 },{minimize:false})
 
 const doctorModel = mongoose.models.doctor || mongoose.model('doctor',doctorSchema)

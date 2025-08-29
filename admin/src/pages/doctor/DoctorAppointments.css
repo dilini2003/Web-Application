@@ -1,0 +1,107 @@
+.AllAppointment-page {
+
+    width: 55rem;      
+  margin: 1.25rem; 
+  margin-top: -37rem;
+  margin-left: 17rem;
+}
+
+.AllAppointment-title {
+    margin-bottom: 0.75rem; /* mb-3 */
+  font-size: 1.125rem;    /* text-lg */
+  font-weight: 500;
+}
+
+.AllAppointment-titles {
+    display: grid;  margin-left: 2rem; 
+    margin-right: 1rem;                    /* sm:grid */
+    grid-template-columns: 6fr 6fr 2fr ; /* grid-cols-[...] */
+    grid-auto-flow: column;              /* grid-flow-col */
+    padding-top: 0.75rem;                /* py-3 */
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;                /* px-6 */
+    padding-right: 1.5rem;
+    border-bottom: 1px solid #e5e7eb;    /* border-b */
+}
+
+.AllAppointment-topics {
+    background-color: white;     /* bg-white */
+  border: 1px solid #e5e7eb;   /* border */
+  border-radius: 0.5rem;       /* rounded */
+  font-size: 0.875rem;         /* text-sm */
+  max-height: 80vh;            /* max-h-[80vh] */
+  overflow-y: scroll; 
+}
+
+.AllAppointment {
+  display: flex;
+  gap: 1rem;
+  margin-left: 1rem;
+}
+
+.Appontmentimag {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.7rem;
+}
+
+.Appontment-topics {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #000; /* text-gray-500 */
+  padding: 0.75rem 1.5rem; /* py-3 px-6 */
+  border-bottom: 1px solid #e5e7eb; /* border-b */
+  gap: 0.5rem; /* default gap for small screens */
+}
+
+.Appontment-image-name {
+    display: flex;
+    margin-left: 1rem;
+  align-items: center;
+  gap: 0.5rem;
+  
+}
+
+.Appontment-image {
+    width: 2rem;         /* 32px */
+  border-radius: 9999px;
+}
+
+.tick-image,
+.cancel-image {
+    width: 2.5rem;         /* w-10 = 40px = 2.5rem */
+  cursor: pointer;
+}
+
+.tick-image.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.Appointment-btn {
+  display: flex;
+}
+
+.cancel {
+    color: #f87171;       /* Tailwind red-400 */
+  font-size: 0.75rem;   /* text-xs */
+  font-weight: 500;
+}
+
+.done {
+  color: #71b5f8;       /* Tailwind red-400 */
+  font-size: 0.75rem;   /* text-xs */
+  font-weight: 500;
+}
+.nameofpatent {
+  color: #000;
+
+  font-size: 20px;
+
+}
+
+.action {
+  margin-right: 5rem;
+}

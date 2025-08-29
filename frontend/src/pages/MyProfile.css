@@ -1,0 +1,164 @@
+/* MyProfile.css */
+
+.profile-page {
+  max-width: 600px;
+  margin: 20px auto;
+  margin-top: 6rem;
+  padding: 20px 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+  font-family: "Arial", sans-serif;
+}
+.upload-containers {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 12px 0;
+}
+
+.upload-labels {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.upload-icons {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #a8a6a6;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+.upload-icons:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.profile-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #222;
+  margin: 5px 0 10px;
+}
+
+.profile-name-input {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 6px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.profile-section-divider {
+  margin: 15px 0;
+  border: none;
+  border-top: 1px solid #5F6FFF;
+}
+
+.profile-section-title {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 15px 0 10px;
+  color: #333;
+  text-decoration: underline #1E285F;
+  padding-bottom: 3px;
+}
+
+.info-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info-label {
+  width: 120px;   /* fixed width so all labels align nicely */
+  font-size: 14px;
+  font-weight: 500;
+  color: #444;
+}
+
+.info-value {
+  flex: 1;   /* takes remaining space */
+  font-size: 14px;
+  color: #333;
+}
+
+.info-value-blue {
+  flex: 1;   /* takes remaining space */
+  font-size: 14px;
+  color: #3C96FF;
+}
+
+.input-field {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.address-inputs input {
+  margin-bottom: 6px;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+.edit-button,
+.save-button {
+  padding: 8px 18px;
+  border: 1px solid #5a4fe0;
+  border-radius: 20px;
+  background: #fff;
+  color: #5a4fe0;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.edit-button:hover {
+  background: #f1f0ff;
+}
+
+.save-button:hover {
+  background: #f1f0ff;
+}
+
+.upload-image1 {
+display: inline-block;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.upload-image2 {
+width: 9rem;         /* w-36 */
+  border-radius: 0.25rem; /* rounded */
+  opacity: 0.75;  
+}
+
+.upload-image3 {
+width: 2.5rem;        /* w-10 */
+  position: absolute;   /* absolute */
+  bottom: 3rem;         /* bottom-12 */
+  right: 3rem; 
+}
+
+.upload-image4 {
+width: 9rem;       /* w-36 */
+  border-radius: 0.5rem;
+}

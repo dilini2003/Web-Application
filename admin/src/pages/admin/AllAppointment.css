@@ -1,0 +1,84 @@
+.AllAppointment-page {
+
+  width: 60rem;
+  margin: 1.25rem;
+  margin-top: -37rem;
+  margin-left: 17rem;
+}
+
+.AllAppointment-title {
+  margin-bottom: 0.75rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.AllAppointment-topics {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  max-height: 80vh;
+  overflow-y: scroll;
+}
+
+.AllAppointment-topic {
+  display: grid;
+  grid-template-columns: 4.5fr 6fr 7fr 4fr 1fr;
+  grid-auto-flow: column;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.Appontment-topics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: #6b7280;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  gap: 0.5rem;
+}
+
+.Appontment-number {
+  display: none;
+}
+
+.Appontment-image-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+.Appontment-image {
+  width: 2rem;
+  border-radius: 9999px;
+}
+
+.Appontment-image-name-doc {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.Appontment-image-doc {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  background-color: #e5e7eb;
+}
+
+.cancel-image {
+  width: 2.5rem;
+  cursor: pointer;
+}
+
+.cancel {
+  color: #f87171;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
