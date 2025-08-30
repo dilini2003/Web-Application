@@ -31,7 +31,7 @@ const DoctorAppointments = () => {
           <p>Date & Time</p>
           <p>Actions</p>
         </div>
-        {appointments.reverse().map((item, index) => {
+        {appointments.slice().map((item, index) => {
           const userData = JSON.parse(item.userData);
 
           return (

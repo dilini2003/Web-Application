@@ -28,6 +28,7 @@
   margin-bottom: 10px;
   color: #000;
 }
+
 .search-title {
   font-size: 20px;
   font-weight: 600;
@@ -67,13 +68,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; 
-  padding-top: 1rem; 
+  gap: 1rem;
+  padding-top: 1rem;
   color: #1f2937;
 }
 
 .speciality-title {
-    font-size: 1.875rem; /* 30px */
+  font-size: 1.875rem;
   font-weight: 500;
 }
 
@@ -92,6 +93,7 @@
   width: 55%;
   overflow-x: scroll;
 }
+
 .specialities::-webkit-scrollbar {
   display: none;
 }
@@ -100,7 +102,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 0.75rem;         
+  font-size: 0.75rem;
   cursor: pointer;
   flex-shrink: 0;
   transition: all 0.5s ease;
@@ -111,8 +113,8 @@
 }
 
 .speciality-img {
-  width: 5rem;     
-  margin-bottom: 0.5rem; 
+  width: 5rem;
+  margin-bottom: 0.5rem;
 }
 
 .doctor-section {
@@ -120,7 +122,7 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  margin-top:0;
+  margin-top: 0;
   margin-bottom: 0;
   color: #111827;
   margin-left: 1rem;
@@ -178,7 +180,7 @@
 
 .doctor-info {
   padding: 1rem;
-  text-align:left;
+  text-align: left;
 }
 
 .doctor-status {
@@ -205,7 +207,7 @@
   margin-top: 0;
   margin-bottom: 0.1rem;
   font-weight: 500;
-  color: #111827; 
+  color: #111827;
 }
 
 .doctor-speciality {
@@ -216,7 +218,7 @@
 }
 
 .button_book {
-  background-color: #13DBDB; /* cyan-500 */
+  background-color: #13DBDB;
   color: white;
   padding: 0.6rem 1.5rem;
   font-size: 0.9rem;
@@ -230,5 +232,5 @@
 }
 
 .button_book:hover {
-  background-color: #06b6d4 ; /* darker cyan */
+  background-color: #06b6d4;
 }

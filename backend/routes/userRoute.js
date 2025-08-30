@@ -1,24 +1,38 @@
-import express from 'express'
-import { bookAppointment, cancelAppointment, getProfile,  listAppointments,  loginUser, payAppointment, registerUser, updateProfile } from '../controllers/userController.js'
-import authUser from '../middlewares/authUser.js'
-import upload from '../middlewares/multer.js'
+import express from "express";
+import {
+  bookAppointment,
+  cancelAppointment,
+  getProfile,
+  listAppointments,
+  loginUser,
+  payAppointment,
+  registerUser,
+  updateProfile,
+} from "../controllers/userController.js";
+import authUser from "../middlewares/authUser.js";
+import upload from "../middlewares/multer.js";
 
-const userRouter = express.Router()
+const userRouter = express.Router();
 
-userRouter.post('/register', registerUser)
+userRouter.post("/register", registerUser);
 
-userRouter.post('/login',loginUser)
+userRouter.post("/login", loginUser);
 
-userRouter.get('/get-profile',authUser, getProfile)
+userRouter.get("/get-profile", authUser, getProfile);
 
-userRouter.post('/update-profile',upload.single('image'), authUser,updateProfile)
+userRouter.post(
+  "/update-profile",
+  upload.single("image"),
+  authUser,
+  updateProfile
+);
 
-userRouter.post('/book-appointment', authUser, bookAppointment)
+userRouter.post("/book-appointment", authUser, bookAppointment);
 
-userRouter.get('/appointments', authUser, listAppointments)
+userRouter.get("/appointments", authUser, listAppointments);
 
-userRouter.post('/pay-appointment', authUser, payAppointment)
+userRouter.post("/pay-appointment", authUser, payAppointment);
 
-userRouter.post('/cancel-appointment', authUser, cancelAppointment)
+userRouter.post("/cancel-appointment", authUser, cancelAppointment);
 
-export default userRouter
+export default userRouter;

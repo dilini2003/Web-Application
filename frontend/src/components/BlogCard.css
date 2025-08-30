@@ -69,33 +69,3 @@
 .blog-button:hover {
   background-color: #007d81;
 }
-
-/* 📱 Responsive Design */
-@media (max-width: 1024px) {
-  .blog-card {
-    width: 15rem;
-  }
-
-  .blog-img {
-    height: 140px;
-  }
-
-  .blog-heading {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .blog-card {
-    width: 100%;   /* full width in smaller screens */
-    margin: 0 auto 1rem;
-  }
-
-  .blog-img {
-    height: 180px;
-  }
-
-  .blog-button {
-    align-self: center; /* center button on tablet */
-  }
-}

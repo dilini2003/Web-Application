@@ -25,7 +25,7 @@ const AllAppointments = () => {
           <p>fees</p>
           <p>Actions</p>
         </div>
-        {appointments.map((item, index) => {
+        {appointments.slice().reverse().map((item, index) => {
           const docData = JSON.parse(item.docData);
           const userData = JSON.parse(item.userData);
 

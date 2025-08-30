@@ -28,36 +28,38 @@
 
 .doctor-content {
   flex: 1;
-  border: 1px solid #9ca3af; 
-  border-radius: 0.5rem; 
-  padding: 2rem;     
-  width: 50rem;   
-  padding-top: 1.75rem;  
+  border: 1px solid #9ca3af;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  width: 50rem;
+  padding-top: 1.75rem;
   padding-bottom: 1.75rem;
   background-color: #ffffff;
-  margin-left: 18rem; 
+  margin-left: 18rem;
   margin-top: -16rem;
-} 
+}
 
 .doctor-name {
-  font-size: 1.3rem;   
+  font-size: 1.3rem;
   font-weight: 600;
-  gap:0.5rem;    
-  color: #111827; 
+  gap: 0.5rem;
+  color: #111827;
 }
+
 .verified-icon {
   width: 1.25rem;
 }
+
 .doctor-meta {
   display: flex;
- margin-top: 0.4rem;
+  margin-top: 0.4rem;
   align-items: center;
   gap: 0.5rem;
 }
 
 .doctor-degree {
-font-size: 0.9rem; /* text-sm = 14px */
-  margin-top: 0.25rem; /* mt-1 = 4px */
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
   color: #4b5563;
 }
 
@@ -74,47 +76,52 @@ font-size: 0.9rem; /* text-sm = 14px */
 
 .about-title {
   display: flex;
-  gap: 0.25rem;         /* gap-1 = 4px */
-  font-size: 1rem;  /* text-sm = 14px */
-  font-weight: 600;     /* font-medium */
-  color: #111827;       /* text-gray-900 */
-  margin-top: 0.75rem; 
+  gap: 0.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin-top: 0.75rem;
 }
+
 .about-text {
   line-height: 1.4rem;
-  font-size: 1rem;    /* text-sm = 14px */
-  color: #555;         /* text-gray-500 */
-  max-width: 800px;       /* corrected */
+  font-size: 1rem;
+  color: #555;
+  max-width: 800px;
   margin-top: 0.25rem;
 }
+
 .fees {
   margin-top: 10px;
   font-size: 1rem;
   color: #555;
 }
+
 .fee {
   font-weight: bold;
   color: #111;
 }
 
-/* Booking Section */
 .booking-section {
-  margin-top: 1rem;            /* mt-4 = 16px */
-  font-weight: 500;            /* font-medium */
+  margin-top: 1rem;
+  font-weight: 500;
   color: #374151;
   margin-left: 18rem;
 }
+
 .booking-title {
   font-size: 20px;
   font-weight: bold;
 }
+
 .booking-days-container {
   display: flex;
-  gap: 0.75rem;           /* gap-3 = 12px */
+  gap: 0.75rem;
   align-items: center;
   width: 100%;
   margin-top: 1rem;
 }
+
 .booking-day-card {
   background: #ffffff;
   border: 1px solid #DDDDDD;
@@ -124,16 +131,19 @@ font-size: 0.9rem; /* text-sm = 14px */
   cursor: pointer;
   text-align: center;
 }
+
 .booking-day-card.active {
   background: #0047ab;
   color: #fff;
 }
+
 .booking-times-container {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
+
 .slot-btn {
   border: 1px solid #ccc;
   border-radius: 20px;
@@ -141,11 +151,13 @@ font-size: 0.9rem; /* text-sm = 14px */
   background: #fff;
   cursor: pointer;
 }
+
 .slot-btn.selected {
   background: #0047ab;
   color: #fff;
   border-color: #0047ab;
 }
+
 .book-btn {
   margin-top: 20px;
   padding: 12px 24px;
@@ -170,8 +182,9 @@ font-size: 0.9rem; /* text-sm = 14px */
   gap: 1.5rem;
   justify-content: center;
 }
+
 .related-doctor-card {
-    width: 14rem;
+  width: 14rem;
   background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -180,14 +193,17 @@ font-size: 0.9rem; /* text-sm = 14px */
   cursor: pointer;
   margin-bottom: 0.5rem;
 }
+
 .related-doctor-card:hover {
   transform: translateY(-6px);
 }
+
 .image-box {
   background-color: #f1f5f9;
   padding-left: 2rem;
   display: flex;
 }
+
 .image-box img {
   width: 10rem;
   height: 13rem;
@@ -195,10 +211,12 @@ font-size: 0.9rem; /* text-sm = 14px */
   margin-bottom: 0;
   object-fit: cover;
 }
+
 .doctor-info {
   padding: 1rem;
-  text-align:left;
+  text-align: left;
 }
+
 .doctor-status {
   display: flex;
   align-items: center;
@@ -223,7 +241,7 @@ font-size: 0.9rem; /* text-sm = 14px */
   margin-top: 0;
   margin-bottom: 0.1rem;
   font-weight: 500;
-  color: #111827; 
+  color: #111827;
 }
 
 .doctor-speciality {
@@ -232,4 +250,3 @@ font-size: 0.9rem; /* text-sm = 14px */
   margin-bottom: 1rem;
   color: #6b7280;
 }
-

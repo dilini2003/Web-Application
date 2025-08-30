@@ -1,4 +1,3 @@
-
 .about {
   font-family: Arial, sans-serif;
   color: #333;
@@ -72,7 +71,7 @@
 }
 
 .stat-label {
-    margin-top: 0;
+  margin-top: 0;
   font-size: 14px;
   color: #ffffff;
 }
@@ -83,13 +82,13 @@
 }
 
 .about-image {
- flex: 1;
-min-width: 300px;
+  flex: 1;
+  min-width: 300px;
   text-align: center;
 }
 
 .about-image img {
   max-width: 100%;
- height: 38rem;
+  height: 38rem;
   border-radius: 8px;
 }

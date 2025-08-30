@@ -12,27 +12,27 @@ const About = () => {
             <p className="section-subtitle">WHY PATIENTS CHOOSE US</p>
             <p className="about-paragraph">
               At MediMeet, we are committed to making healthcare more <br />
-              accessible, efficient, and patient-centered. Our application{" "}
+              accessible, efficient, and patient-centered. Our application
               <br />
-              connects patients with qualified, trusted medical professionals{" "}
+              connects patients with qualified, trusted medical professionals
               <br />
-              through a secure, user-friendly platform designed to simplify{" "}
+              through a secure, user-friendly platform designed to simplify
               <br />
               appointment scheduling and healthcare access.
             </p>
             <p className="about-paragraph">
-              MediMeet partners with highly experienced doctors and clinics,{" "}
+              MediMeet partners with highly experienced doctors and clinics,
               <br />
               offering digital access to a wide range of specialties and
               services. <br />
-              Whether it's a routine consultation or follow-up care, MediMeet{" "}
+              Whether it's a routine consultation or follow-up care, MediMeet
               <br />
               ensures patients can easily book, manage, and attend <br />
               appointments — all in one place.
             </p>
             <p className="about-paragraph">
               Backed by a commitment to data privacy and patient safety, <br />
-              MediMeet is your trusted digital gateway to smarter, faster, and{" "}
+              MediMeet is your trusted digital gateway to smarter, faster, and
               <br />
               more reliable healthcare access.
             </p>
@@ -63,7 +63,7 @@ const About = () => {
           <img src="/images/aboutphoto.png" alt="" />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

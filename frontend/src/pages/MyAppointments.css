@@ -25,6 +25,7 @@
   justify-content: space-between;
   border-bottom: 1px solid #ddd;
 }
+
 .doctor-photo {
   background-color: #f1f5f9;
   padding: 1rem;
@@ -51,7 +52,7 @@
 .appt-details .specialty {
   font-size: 14px;
   color: #555;
-  padding-bottom:1rem ;
+  padding-bottom: 1rem;
 }
 
 .appt-details .fee {
@@ -105,12 +106,21 @@
 }
 
 .cancelled-btn {
-  min-width: 12rem;       /* sm:min-w-48 */
-  padding-top: 0.5rem;    /* py-2 */
+  min-width: 12rem;
+  padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  border: 1px solid #ef4444;  /* border-red-500 */
-  border-radius: 0.5rem;  /* rounded */
+  border: 1px solid #ef4444;
+  border-radius: 0.5rem;
   color: #ef4444;
+}
+
+.Return-btn {
+  min-width: 12rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border: 1px solid #1acb2b;
+  border-radius: 0.5rem;
+  color: #21eb3f;
 }
 
 .paid-btn {

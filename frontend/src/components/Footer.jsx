@@ -1,5 +1,5 @@
-import React from 'react';
-import './Footer.css';
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="social-row">
             <img src="/images/facebook_icon.png" alt="Facebook" />
             <p>Facebook</p>
-            </div>
+          </div>
           <div className="social-row">
             <img src="/images/twitter_icon.png" alt="Twitter" />
             <p>Twitter</p>
@@ -58,7 +58,9 @@ const Footer = () => {
       </div>
 
       <hr className="footer-divider" />
-      <p className="footer-bottom">Copyright © 2025 MediMeet - All Right Reserved.</p>
+      <p className="footer-bottom">
+        Copyright © 2025 MediMeet - All Right Reserved.
+      </p>
     </div>
   );
 };
