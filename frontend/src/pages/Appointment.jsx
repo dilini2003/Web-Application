@@ -29,7 +29,7 @@ const Appointment = () => {
       const startTime = new Date(currentDate);
       const endTime = new Date(currentDate);
       startTime.setHours(16, 0, 0, 0);
-      endTime.setHours(20, 30, 0, 0);
+      endTime.setHours(22, 0, 0, 0);
       let timeSlots = [];
       const slotTime = new Date(startTime);
       while (slotTime <= endTime) {

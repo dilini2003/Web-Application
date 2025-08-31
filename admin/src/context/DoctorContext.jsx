@@ -72,7 +72,7 @@ const DoctorContextProvider = (props) => {
       );
       if (data.success) {
         toast.success(data.message);
-        getAppointments();
+        getAppointments(); //refresh
       } else {
         toast.error(data.message);
       }

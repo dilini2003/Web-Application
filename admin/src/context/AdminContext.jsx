@@ -75,7 +75,7 @@ const AdminContextProvider = (props) => {
       );
       if (data.success) {
         toast.success(data.message);
-        getAllAppointments();
+        getAllAppointments(); //refresh
       } else {
         toast.error(data.message);
       }

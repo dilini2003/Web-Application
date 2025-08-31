@@ -61,7 +61,6 @@
   display: none;
 }
 
-/* Show hr only when link is active */
 .link.active .hr {
   display: block;
 }
