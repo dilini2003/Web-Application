@@ -110,6 +110,7 @@ const loginAdmin = async (req, res) => {
 //api to get all doctors list for admin panel
 const alldoctors = async (req, res) => {
   try {
+    
     const doctors = await doctorModel.find({}).select("-password");
     res.json({ success: true, doctors });
   } catch (error) {
