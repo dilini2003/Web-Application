@@ -18,7 +18,7 @@ pipeline {
         stage('Build Frontend Docker Image') {
             steps {
                 script {
-                    sh "sudo docker build -t ${DOCKERHUB_USERNAME}/web-application-frontend:latest ./frontend"
+                    sh "docker build -t ${DOCKERHUB_USERNAME}/web-application-frontend:latest ./frontend"
                 }
             }
         }
@@ -26,7 +26,7 @@ pipeline {
         stage('Build Backend Docker Image') {
             steps {
                 script {
-                    sh "sudo docker build -t ${DOCKERHUB_USERNAME}/web-application-backend:latest ./backend"
+                    sh "docker build -t ${DOCKERHUB_USERNAME}/web-application-backend:latest ./backend"
                 }
             }
         }
@@ -34,7 +34,7 @@ pipeline {
         stage('Build Admin Docker Image') {
             steps {
                 script {
-                    sh "sudo docker build -t ${DOCKERHUB_USERNAME}/web-application-admin:latest ./admin"
+                    sh "docker build -t ${DOCKERHUB_USERNAME}/web-application-admin:latest ./admin"
                 }
             }
         }
@@ -43,8 +43,8 @@ pipeline {
             steps {
                 script {
                     withCredentials([usernamePassword(credentialsId: DOCKERHUB_CREDENTIALS, usernameVariable: 'USER', passwordVariable: 'PASS')]) {
-                        sh "echo $PASS | sudo docker login -u $USER --password-stdin"
-                        sh "sudo docker push ${DOCKERHUB_USERNAME}/web-application-frontend:latest"
+                        sh "echo $PASS | docker login -u $USER --password-stdin"
+                        sh "docker push ${DOCKERHUB_USERNAME}/web-application-frontend:latest"
                     }
                 }
             }
@@ -54,8 +54,8 @@ pipeline {
             steps {
                 script {
                     withCredentials([usernamePassword(credentialsId: DOCKERHUB_CREDENTIALS, usernameVariable: 'USER', passwordVariable: 'PASS')]) {
-                        sh "echo $PASS | sudo docker login -u $USER --password-stdin"
-                        sh "sudo docker push ${DOCKERHUB_USERNAME}/web-application-backend:latest"
+                        sh "echo $PASS | docker login -u $USER --password-stdin"
+                        sh "docker push ${DOCKERHUB_USERNAME}/web-application-backend:latest"
                     }
                 }
             }
@@ -65,8 +65,8 @@ pipeline {
             steps {
                 script {
                     withCredentials([usernamePassword(credentialsId: DOCKERHUB_CREDENTIALS, usernameVariable: 'USER', passwordVariable: 'PASS')]) {
-                        sh "echo $PASS | sudo docker login -u $USER --password-stdin"
-                        sh "sudo docker push ${DOCKERHUB_USERNAME}/web-application-admin:latest"
+                        sh "echo $PASS | docker login -u $USER --password-stdin"
+                        sh "docker push ${DOCKERHUB_USERNAME}/web-application-admin:latest"
                     }
                 }
             }
