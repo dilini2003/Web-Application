@@ -2,68 +2,80 @@ pipeline {
     agent any
 
     environment {
-        DOCKERHUB_USER = 'dilini2003'
-        DOCKER_PASS = 'Yuren1999'
+        DOCKERHUB_CREDENTIALS = 'dockerhub-credentials'
+        DOCKERHUB_USERNAME = 'dilini2003'
     }
 
     stages {
-        stage('Checkout Repository') {
+        stage('Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/dilini2003/web-application.git'
+                git branch: 'main',
+                    url: 'https://github.com/dilini2003/web-application.git',
+                    credentialsId: 'github-token'
             }
         }
 
-        stage('Login to Docker Hub') {
+        stage('Build Frontend Docker Image') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
-                    sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
+                script {
+                    sh "docker build -t ${DOCKERHUB_USERNAME}/web-application-frontend:latest ./frontend"
                 }
             }
         }
 
-        stage('Build and Push Frontend Image') {
+        stage('Build Backend Docker Image') {
             steps {
-                dir('frontend') {
-                    sh """
-                        docker build -t ${DOCKERHUB_USER}/web-application-frontend:latest .
-                        docker push ${DOCKERHUB_USER}/web-application-frontend:latest
-                    """
+                script {
+                    sh "docker build -t ${DOCKERHUB_USERNAME}/web-application-backend:latest ./backend"
                 }
             }
         }
 
-        stage('Build and Push Backend Image') {
+        stage('Build Admin Docker Image') {
             steps {
-                dir('backend') {
-                    sh """
-                        docker build -t ${DOCKERHUB_USER}/web-application-backend:latest .
-                        docker push ${DOCKERHUB_USER}/web-application-backend:latest
-                    """
+                script {
+                    sh "docker build -t ${DOCKERHUB_USERNAME}/web-application-admin:latest ./admin"
                 }
             }
         }
 
-        stage('Build and Push Admin Image') {
+        stage('Push Frontend Docker Image') {
             steps {
-                dir('admin') {
-                    sh """
-                        docker build -t ${DOCKERHUB_USER}/web-application-admin:latest .
-                        docker push ${DOCKERHUB_USER}/web-application-admin:latest
-                    """
+                script {
+                    withCredentials([usernamePassword(credentialsId: DOCKERHUB_CREDENTIALS, usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+                        sh "echo $PASS | docker login -u $USER --password-stdin"
+                        sh "docker push ${DOCKERHUB_USERNAME}/web-application-frontend:latest"
+                    }
+                }
+            }
+        }
+
+        stage('Push Backend Docker Image') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: DOCKERHUB_CREDENTIALS, usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+                        sh "echo $PASS | docker login -u $USER --password-stdin"
+                        sh "docker push ${DOCKERHUB_USERNAME}/web-application-backend:latest"
+                    }
+                }
+            }
+        }
+
+        stage('Push Admin Docker Image') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: DOCKERHUB_CREDENTIALS, usernameVariable: 'USER', passwordVariable: 'PASS')]) {
+                        sh "echo $PASS | docker login -u $USER --password-stdin"
+                        sh "docker push ${DOCKERHUB_USERNAME}/web-application-admin:latest"
+                    }
                 }
             }
         }
     }
 
     post {
-        success {
-            echo '✅ Build and push completed successfully!'
-        }
-        failure {
-            echo '❌ Build or push failed. Check logs for details.'
-        }
         always {
-            sh 'docker logout'
+            echo "Pipeline finished."
         }
     }
 }
