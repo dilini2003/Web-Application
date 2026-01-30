@@ -75,25 +75,19 @@ pipeline {
             }
         }
         stage('Deploy to EC2') {
-            steps {
-                script {
-                    // This uses the SSH Agent plugin in Jenkins
-                    sshagent(credentials: [SSH_KEY_ID]) {
-                        // 1. Copy the production docker-compose file to EC2
-                        sh "scp -o StrictHostKeyChecking=no docker-compose.yml ${EC2_USER}@${EC2_PUBLIC_IP}:/home/ubuntu/docker-compose.yml"
-                        
-                        // 2. SSH and Deploy
-                        sh """
-                        ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_PUBLIC_IP} << 'EOF'
-                            docker-compose pull
-                            docker-compose up -d
-                            docker image prune -f
-                        EOF
-                        """
-                    }
-                }
+    steps {
+        script {
+            sshagent(credentials: [SSH_KEY_ID]) {
+                // 1. Copy the docker-compose file
+                sh "scp -o StrictHostKeyChecking=no docker-compose.yml ${EC2_USER}@${EC2_PUBLIC_IP}:/home/ubuntu/docker-compose.yml"
+                
+                // 2. SSH and Deploy using a single string of command
+                sh "ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_PUBLIC_IP} 'sudo docker compose pull && sudo docker compose up -d && sudo docker image prune -f'"
             }
         }
+    }
+}
+        
     }
 
     post {
