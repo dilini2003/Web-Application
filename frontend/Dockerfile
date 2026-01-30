@@ -4,6 +4,9 @@ FROM node:20
 # Set working directory inside container
 WORKDIR /app
 
+ARG VITE_BACKEND_URL
+ENV VITE_BACKEND_URL=$VITE_BACKEND_URL
+
 # Copy package files and install dependencies
 COPY package*.json ./
 RUN npm install

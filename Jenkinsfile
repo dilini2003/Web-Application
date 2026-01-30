@@ -21,7 +21,7 @@ pipeline {
         stage('Build Frontend Docker Image') {
             steps {
                 script {
-                    sh "docker build -t ${DOCKERHUB_USERNAME}/web-application-frontend:latest ./frontend"
+                    sh "docker build --build-arg VITE_BACKEND_URL=http://${EC2_PUBLIC_IP}:4000 -t ${DOCKERHUB_USERNAME}/web-application-frontend:latest ./frontend"
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
         stage('Build Admin Docker Image') {
             steps {
                 script {
-                    sh "docker build -t ${DOCKERHUB_USERNAME}/web-application-admin:latest ./admin"
+                    sh "docker build --build-arg VITE_BACKEND_URL=http://${EC2_PUBLIC_IP}:4000 -t ${DOCKERHUB_USERNAME}/web-application-admin:latest ./admin"
                 }
             }
         }
