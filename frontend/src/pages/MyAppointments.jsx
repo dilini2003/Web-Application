@@ -11,7 +11,7 @@ const MyAppointments = () => {
   const getUserAppointmnets = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:4000/api/user/appointments",
+        backendUrl + "/api/user/appointments",
         { headers: { token } }
       );
 
@@ -28,7 +28,7 @@ const MyAppointments = () => {
   const cancelAppointment = async (appointmentId) => {
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/user/cancel-appointment",
+        backendUrl + "/api/user/cancel-appointment",
         { appointmentId },
         { headers: { token } }
       );
@@ -48,7 +48,7 @@ const MyAppointments = () => {
   const payAppointment = async (appointmentId) => {
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/user/pay-appointment",
+        backendUrl + "/api/user/pay-appointment",
         { appointmentId },
         { headers: { token } }
       );

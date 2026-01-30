@@ -23,7 +23,7 @@ const MyProfile = () => {
       image && formData.append("image", image);
 
       const { data } = await axios.post(
-        "http://localhost:4000/api/user/update-profile",
+        backendUrl + "/api/user/update-profile",
         formData,
         { headers: { token } }
       );

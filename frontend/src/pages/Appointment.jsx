@@ -62,7 +62,7 @@ const Appointment = () => {
       let year = date.getFullYear();
       const slotDate = day + "/" + month + "/" + year;
       const { data } = await axios.post(
-        "http://localhost:4000/api/user/book-appointment",
+        backendUrl + "/api/user/book-appointment",
         { docId, slotDate, slotTime },
         { headers: { token } }
       );

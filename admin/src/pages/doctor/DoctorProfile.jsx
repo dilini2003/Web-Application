@@ -26,7 +26,7 @@ const DoctorProfile = () => {
       image && formData.append("image", image);
 
       const { data } = await axios.post(
-        "http://localhost:4000/api/doctor/update-profile",
+        backendUrl + "/api/doctor/update-profile",
         formData,
         { headers: { dtoken: dToken } }
       );

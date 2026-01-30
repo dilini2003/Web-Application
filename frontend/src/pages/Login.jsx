@@ -18,7 +18,7 @@ const Login = () => {
     try {
       if (isLogin === "Login") {
         const { data } = await axios.post(
-          "http://localhost:4000/api/user/login",
+          backendUrl + "/api/user/login",
           { password, email }
         );
         if (data.success) {
@@ -30,7 +30,7 @@ const Login = () => {
         }
       } else {
         const { data } = await axios.post(
-          "http://localhost:4000/api/user/register",
+          backendUrl + "/api/user/register",
           { name, password, email }
         );
         if (data.success) {
