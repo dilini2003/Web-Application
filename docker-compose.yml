@@ -1,6 +1,6 @@
 services:
   backend:
-    build: ./backend
+    image: dilini2003/web-application-backend:latest
     container_name: backend
     ports:
       - "4000:4000"
@@ -13,26 +13,18 @@ services:
       - ADMIN_EMAIL=admin@gmail.com
       - ADMIN_PASSWORD=admin1234
       - JWT_SECRET=doctoradmin
-    restart: unless-stopped
+    restart: always
 
   frontend:
-    build: ./frontend
+    image: dilini2003/web-application-frontend:latest
     container_name: frontend
     ports:
-      - "5173:80"
-    depends_on:
-      - backend
-    environment:
-      - VITE_BACKEND_URL=http://backend:4000
-    restart: unless-stopped
+      - "5173:5173"
+    restart: always
 
   admin:
-    build: ./admin
+    image: dilini2003/web-application-admin:latest
     container_name: admin
     ports:
-      - "5174:80"
-    depends_on:
-      - backend
-    environment:
-      - VITE_BACKEND_URL=http://backend:4000
-    restart: unless-stopped
+      - "5174:5174"
+    restart: always

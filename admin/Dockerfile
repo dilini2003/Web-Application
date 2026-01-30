@@ -1,5 +1,5 @@
 # Stage 1: Build the Vite app
-FROM node:18-alpine AS builder
+FROM node:20
 
 # Set working directory inside the container
 WORKDIR /app
@@ -14,14 +14,7 @@ COPY . .
 # Build the project for production
 RUN npm run build
 
-# Stage 2: Use Nginx to serve the built app
-FROM nginx:alpine
+EXPOSE 5174
 
-# Copy the build output from the previous stage
-COPY --from=builder /app/dist /usr/share/nginx/html
-
-# Expose port 80 for serving
-EXPOSE 80
-
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start the Vite preview server
+CMD ["npm", "run", "preview", "--", "--port", "5174", "--host", "0.0.0.0"]
