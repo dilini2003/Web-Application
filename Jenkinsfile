@@ -21,7 +21,7 @@ pipeline {
         stage('Build Frontend Docker Image') {
             steps {
                 script {
-                    sh "docker build --build-arg VITE_BACKEND_URL=http://${EC2_PUBLIC_IP}:4000 -t ${DOCKERHUB_USERNAME}/web-application-frontend:latest ./frontend"
+                    sh "docker build --build-arg VITE_BACKEND_URL=http://${EC2_PUBLIC_IP} -t ${DOCKERHUB_USERNAME}/web-application-frontend:latest ./frontend"
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
         stage('Build Admin Docker Image') {
             steps {
                 script {
-                    sh "docker build --build-arg VITE_BACKEND_URL=http://${EC2_PUBLIC_IP}:4000 -t ${DOCKERHUB_USERNAME}/web-application-admin:latest ./admin"
+                    sh "docker build --build-arg VITE_BACKEND_URL=http://${EC2_PUBLIC_IP} -t ${DOCKERHUB_USERNAME}/web-application-admin:latest ./admin"
                 }
             }
         }
@@ -77,13 +77,13 @@ pipeline {
         stage('Deploy to EC2') {
     steps {
         script {
-            sshagent(credentials: [SSH_KEY_ID]) {
-                // 1. Copy the docker-compose file
-                sh "scp -o StrictHostKeyChecking=no docker-compose.yml ${EC2_USER}@${EC2_PUBLIC_IP}:/home/ubuntu/docker-compose.yml"
-                
-                // 2. SSH and Deploy using a single string of command
-                sh "ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_PUBLIC_IP} 'sudo docker compose pull && sudo docker compose up -d && sudo docker image prune -f'"
-            }
+                    sshagent(credentials: [SSH_KEY_ID]) {
+                        // 1. Copy BOTH docker-compose.yml AND nginx.conf
+                        sh "scp -o StrictHostKeyChecking=no docker-compose.yml nginx.conf ${EC2_USER}@${EC2_PUBLIC_IP}:/home/ubuntu/"
+                        
+                        // 2. SSH and Deploy
+                        sh "ssh -o StrictHostKeyChecking=no ${EC2_USER}@${EC2_PUBLIC_IP} 'sudo docker compose pull && sudo docker compose up -d && sudo docker image prune -f'"
+                    }
         }
     }
 }
