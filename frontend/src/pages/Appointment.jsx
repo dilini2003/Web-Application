@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 
 const Appointment = () => {
   const { docId } = useParams();
-  const { doctors, token, getDoctorsData } = useContext(AppContext);
+  const { doctors, token, getDoctorsData, backendUrl } = useContext(AppContext);
   const daysOfWeek = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
   const navigate = useNavigate();
 

@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import axios from "axios";
 
 const MyAppointments = () => {
-  const { token, getDoctorsData } = useContext(AppContext);
+  const { token, getDoctorsData, backendUrl } = useContext(AppContext);
   const [appointments, setAppointments] = useState([]);
 
   const getUserAppointmnets = async () => {
