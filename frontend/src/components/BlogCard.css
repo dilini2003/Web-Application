@@ -69,3 +69,45 @@
 .blog-button:hover {
   background-color: #007d81;
 }
+
+@media (max-width: 768px) {
+  .blog-card {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+
+  .blog-img {
+    height: 180px;
+  }
+
+  .blog-heading {
+    font-size: 1.2rem;
+    padding-left: 0;
+  }
+
+  .blog-snippet,
+  .blog-full {
+    font-size: 0.95rem;
+    padding-left: 0;
+  }
+
+  .blog-button {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 15px;
+    padding: 12px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-card {
+    border-radius: 8px;
+  }
+
+  .blog-img {
+    height: 150px;
+  }
+}

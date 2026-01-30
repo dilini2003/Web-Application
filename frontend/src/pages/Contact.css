@@ -47,3 +47,44 @@
   margin-bottom: 1rem;
   line-height: 1.7;
 }
+
+@media (max-width: 768px) {
+  .contact {
+    margin-top: 4rem;
+    padding: 0 1rem;
+  }
+
+  .contact-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .contact-image img {
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .contact-info {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .info-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+  }
+
+  .info-address,
+  .info-phone,
+  .info-email {
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+  }
+}

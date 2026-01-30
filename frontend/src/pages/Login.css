@@ -213,3 +213,54 @@
   color: #333;
   transform: scale(1.1);
 }
+
+
+@media (max-width: 640px) {
+  .modal-card.login-size,
+  .modal-card.signup-size {
+    width: 95%; 
+    padding: 1.5rem; 
+    margin: 10px;
+  }
+
+  .sides {
+    flex-direction: column;
+  }
+
+  .left-side, 
+  .right-side {
+    width: 100%; 
+    margin-left: 0; 
+  }
+
+  .text-link {
+    margin-left: 0;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+
+  .terms {
+    align-items: flex-start;
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .terms input {
+    margin-top: 4px;
+    margin-right: 8px;
+  }
+
+  .Login-title {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .input {
+    font-size: 16px;
+  }
+}

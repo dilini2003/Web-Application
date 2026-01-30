@@ -250,3 +250,113 @@
   margin-bottom: 1rem;
   color: #6b7280;
 }
+
+@media (max-width: 768px) {
+  .appointment-container {
+    margin-top: 2rem;
+    padding: 10px;
+  }
+
+  .doctor-image-box {
+    width: 100%;
+    height: auto;
+    margin-left: 0;
+    border-radius: 0.5rem;
+    padding: 2rem 0;
+  }
+
+  .doctor-image {
+    width: 12rem;
+    height: 14rem;
+  }
+
+  .doctor-content {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 1rem;
+    padding: 1.5rem;
+  }
+
+  .doctor-name {
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .doctor-meta {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+    text-align: justify;
+  }
+
+  .fees {
+    text-align: center;
+    background: #f8fafc;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .booking-section {
+    margin-left: 0;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .booking-days-container {
+    justify-content: center;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .booking-day-card {
+    min-width: 3rem;
+    padding: 10px 5px;
+  }
+
+  .booking-times-container {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .slot-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .book-btn {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .related-doctors-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .related-doctor-card {
+    width: 45%;
+    min-width: 150px;
+  }
+
+  .related-doctor-card .image-box img {
+    width: 100%;
+    height: 10rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .related-doctor-card {
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .doctor-content {
+    padding: 1rem;
+  }
+}

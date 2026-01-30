@@ -18,3 +18,31 @@
   gap: 4rem;
   margin-bottom: 1rem;
 }
+
+@media (max-width: 768px) {
+  .blog-section {
+    margin-top: 4rem;
+    padding: 0 1rem;
+  }
+
+  .blog-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-section {
+    margin-top: 3.5rem;
+  }
+  
+  .blog-title {
+    font-size: 20px;
+  }
+}
