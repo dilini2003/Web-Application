@@ -9,7 +9,7 @@ const Home = () => {
         {/*---left side---*/}
         <div className="header-left">
           <p className="header-title">
-            Book Appointment <br /> With Doctors
+            Book Appointment <br /> With Trusted Doctors
           </p>
           <div className="header-info">
             <img
