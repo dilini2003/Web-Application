@@ -1,25 +1,22 @@
-/* --- Desktop Styles (Default) --- */
 .items {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 5%; /* Added horizontal padding for better look */
+  font-size: 0.875rem;
+  padding: 0;
+  margin-bottom: 0;
   border-bottom: 1px solid #9ca3af;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -0.4rem;
+  left: -0.4rem;
   width: 100%;
-  height: 70px; /* Fixed height for consistency */
   background-color: #ffffff;
-  z-index: 100;
-  box-sizing: border-box;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  cursor: pointer;
 }
 
 .logo {
@@ -31,12 +28,11 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: #000b6d;
-  margin: 0;
 }
 
 .items1 {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -45,7 +41,6 @@
 
 .tag {
   font-weight: 500;
-  font-size: 0.875rem;
 }
 
 .link {
@@ -61,8 +56,8 @@
   outline: none;
   height: 2px;
   background-color: #5f6fff;
-  width: 100%;
-  margin: 2px auto 0;
+  width: 60%;
+  margin: 4px auto 0;
   display: none;
 }
 
@@ -78,39 +73,42 @@
   border-radius: 4rem;
   font-weight: 500;
   cursor: pointer;
+  margin-right: 2rem;
 }
 
 .login-btn:hover {
   background-color: #4c5de0;
 }
 
-.profile-container {
-  display: flex;
-  align-items: center;
-  gap: 0.2rem;
-  cursor: pointer;
-  position: relative;
-}
-
 .profile {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  object-fit: cover;
+  width: 2.9rem;
+  height: 2.9rem;
+  border-radius: 9999px;
 }
 
 .dropdown {
+  width: 0.3rem;
   background: none;
   border: none;
-  font-size: 0.6rem;
-  color: #4b5563;
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  margin-right: 2.9rem;
 }
 
 .drop {
   position: absolute;
-  top: 100%;
+  top: 0;
   right: 0;
-  padding-top: 0.5rem;
+  padding-top: 3.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #4b5563;
   z-index: 20;
   display: none;
 }
@@ -120,27 +118,24 @@
 }
 
 .dropdown-content {
-  min-width: 10rem;
+  min-width: 9rem;
   background-color: #f5f5f4;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
-  padding: 0.5rem 0;
-  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  gap: 0;
+  padding: 1rem;
 }
 
 .item {
-  padding: 0.6rem 1rem;
   cursor: pointer;
-  margin: 0;
+  transition: color 0.2s ease;
 }
 
 .item:hover {
-  background-color: #e5e7eb;
-  color: #000;
+  color: #000000;
 }
 
-/* --- Mobile Styles (Screens smaller than 768px) --- */
 @media (max-width: 768px) {
   .items {
     padding: 0.5rem 1rem;
