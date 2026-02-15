@@ -23,7 +23,7 @@ const Home = () => {
             </p>
           </div>
           <a href="/doctors" className="header-cta">
-            Book appointment{" "}
+            B appointment{" "}
             <img src="/images/arrow_icon.svg" alt="" className="arrow-icon" />
           </a>
         </div>
