@@ -27,7 +27,6 @@ const Home = () => {
             <img src="/images/arrow_icon.svg" alt="" className="arrow-icon" />
           </a>
         </div>
-        {/*--right side--*/}
         <div className="header-right">
           <img src="/images/header.jpg" className="header-image" alt="" />
         </div>
@@ -39,7 +38,7 @@ const Home = () => {
             <p className="data-value">94.82%</p>
             <p className="divider">|</p>
             <p className="data-label">
-              Patient Satisfaction Rate <br />
+              Patient Satisfaction Rate<br />
               on Services
             </p>
           </div>
